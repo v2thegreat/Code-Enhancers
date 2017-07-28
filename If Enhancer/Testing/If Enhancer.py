@@ -35,7 +35,6 @@ def if_enhance(l):
 			l[x]=(int(l[x].count('\t')/2))*'\t'+if_enhance_or(if_enhance_and([l[x]]))[-1]
 	return l
 def main():
-	print(if_enhance_or(if_enhance_and(["if x==5 or y==12 and y>12:"]))[-1])
 	Code_Input_Folder="Testing_If_Enhance.py"
 	Code_Lines=open(Code_Input_Folder).read().split("\n")
 	open(Code_Input_Folder,'w').writelines([x+"\n" for x in if_enhance(Code_Lines)])
