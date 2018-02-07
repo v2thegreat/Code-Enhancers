@@ -24,5 +24,10 @@ class testingCodeEnhancer(unittest.TestCase):
 		testStringOr  = ['if 5>3 or 3>4:']
 		testStringAnd = ['if 5>3 and 4>3:']
 
+		correctValueAnd = ['if (5>3) and (4>3)']
+
 	def testingIfEnhanceAnd(self):
-		
+		self.assertEqual(testStringAnd, correctValueAnd)
+
+	def testingIfEnhanceOr(self):
+		self.assertEqual(testStringOr, correctValueOr)
