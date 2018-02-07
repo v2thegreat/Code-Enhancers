@@ -19,7 +19,7 @@ def ifEnhanceAnd(linesOfCode):
 				t[i]="("+t[i].strip()+")"
 			for i in range(len(t)):
 				linesOfCode[line]=inline_addition(t," and ")
-			linesOfCode[line]="if"+linesOfCode[line]+":"
+			linesOfCode[line]="if "+linesOfCode[line]+":"
 
 	return linesOfCode
 
