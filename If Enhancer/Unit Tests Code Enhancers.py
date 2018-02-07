@@ -16,18 +16,19 @@ import unittest
 
 class testingCodeEnhancer(unittest.TestCase):
 	"""docstring for testingCodeEnhancer"""
-	def __init__(self, arg):
-		super(testingCodeEnhancer, self).__init__()
-		self.arg = arg
 
 	def setup(self):
 		testStringOr  = ['if 5>3 or 3>4:']
 		testStringAnd = ['if 5>3 and 4>3:']
 
 		correctValueAnd = ['if (5>3) and (4>3)']
+		correctValueOr = ['if (5>3) or (3>4):']
 
 	def testingIfEnhanceAnd(self):
-		self.assertEqual(testStringAnd, correctValueAnd)
+		self.assertEqual(ifEnhanceAnd(testStringAnd), correctValueAnd)
 
 	def testingIfEnhanceOr(self):
-		self.assertEqual(testStringOr, correctValueOr)
+		self.assertEqual(ifEnhanceOr(testStringOr), correctValueOr)
+
+if __name__ == '__main__':
+    unittest.main()
